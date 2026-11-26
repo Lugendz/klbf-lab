@@ -109,7 +109,10 @@ def main():
     (DOCS / 'BAYSIDE-MORNING-V1.md').write_text(HEAD + body, encoding='utf-8', newline='\n')
     readme = ROOT / 'README.md'
     text = readme.read_text(encoding='utf-8')
-    line = max(rows, key=lambda r: r[2])[4] if rows else '> _Latest run: none yet._'
+    # The README shows OUR latest reference run (the KLBF Lab test machine), never a community run:
+    # community results live in the board (Yvan, 26/11: the homepage must stay under our control).
+    refs = [r for r in rows if bc.REFERENCE in r[4]]
+    line = max(refs, key=lambda r: r[2])[4] if refs else '> _Latest run: none yet._'
     new, n = re.subn(r'(<!-- latest-run-start -->\n).*?(\n> ?<!-- latest-run-end -->)',
                      lambda m: m[1] + line + m[2], text, count=1, flags=re.S)
     if n != 1:

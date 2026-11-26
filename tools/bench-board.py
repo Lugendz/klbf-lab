@@ -4,7 +4,9 @@
 # docs/klbf/bench/bm-v1/submissions.json gives, per serial, the submitter's GitHub login and the card
 # PNG attached to their issue: {"<serial>": {"login": "...", "card": "https://github.com/user-attachments/...",
 # "repo": "https://...", "reference": true}} (repo: the form's project URL, used when the build has no
-# git origin; reference: our own run on the KLBF Lab test machine).
+# git origin; reference: our own run on the KLBF Lab test machine). A reference run may instead keep its
+# card in the repository: "card": "bench/bm-v1/cards/<serial>.png" (relative to docs/klbf/; see
+# tools/bench-publish-ref.py). Community runs need the GitHub-attached card.
 # Also rewrites the "Latest run" line of README.md, between <!-- latest-run-start --> and -end -->.
 # The player on the card must be that login or "anonymous".
 import importlib.util, json, re, sys
@@ -78,9 +80,14 @@ def main():
             bad.append(f'{path.name}: {e}')
             continue
         sub = subs.get(d.get('serial') if isinstance(d, dict) else None)
+        card = str(sub.get('card', '')) if isinstance(sub, dict) else ''
+        # Only our own reference runs may keep the card in the repository (cards/<serial>.png).
+        in_repo = isinstance(sub, dict) and sub.get('reference') is True \
+            and card == f"bench/bm-v1/cards/{d.get('serial')}.png" and (DOCS / card).is_file()
         if not isinstance(sub, dict) or not isinstance(sub.get('login'), str) \
-                or not str(sub.get('card', '')).startswith(bc.CARD):
-            bad.append(f'{path.name}: no submissions.json entry with a login and a GitHub-attached card')
+                or not (card.startswith(bc.CARD) or in_repo):
+            bad.append(f'{path.name}: no submissions.json entry with a login and a GitHub-attached card'
+                       ' (or, for a reference run, its card at docs/klbf/bench/bm-v1/cards/<serial>.png)')
             continue
         problems = bc.check(d, path.name, sub['login'])
         # A card nickname that differs from the submitter's login is shown as the login (the real, linked account).
@@ -91,8 +98,9 @@ def main():
             repo = sub['repo'] if str(sub.get('repo', '')).startswith('https://') else None
             ref = sub.get('reference') is True
             rows.append((vendor(d['gpu']), d['gpu'], d['date'], d['serial'],
-                         latest_line(d, f'docs/klbf/bench/bm-v1/{path.stem}', sub['card'], repo, ref),
-                         bc.row(d, f'bench/bm-v1/{path.stem}', sub['card'], repo, ref)))
+                         latest_line(d, f'docs/klbf/bench/bm-v1/{path.stem}', 'docs/klbf/' + card if in_repo else card,
+                                     repo, ref),
+                         bc.row(d, f'bench/bm-v1/{path.stem}', card, repo, ref)))
     if bad:
         sys.exit('\n'.join(bad))
     groups = [v for v, _ in VENDORS] + ['Other']

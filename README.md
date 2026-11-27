@@ -1,7 +1,7 @@
 <p align="center"><img src="docs/klbf/logo.svg" width="120" alt="KLBF Lab"></p>
 <h1 align="center">KLBF Lab</h1>
 <p align="center">
-  <a href="https://github.com/PastiiJay/klbf-lab/releases/latest"><img src="https://img.shields.io/badge/stable-v26.11.1-1f46c8" alt="stable: v26.11.1"></a>
+  <a href="https://github.com/PastiiJay/klbf-lab/releases/latest"><img src="https://img.shields.io/badge/stable-v26.11.3-1f46c8" alt="stable: v26.11.3"></a>
   <a href="#stable-v26111-27-nov-2026"><img src="https://img.shields.io/badge/BM--v1%20certified-30.2%20fps%20with%20frame%20generation%20(base%2016.0)-2ea44f" alt="BM-v1 certified: 30.2 fps with frame generation, base 16.0"></a>
   <a href="#stable-v26111-27-nov-2026"><img src="https://img.shields.io/badge/real%20play-60%20min%20without%20a%20crash-2ea44f" alt="60 minutes of play without a crash"></a>
   <img src="https://img.shields.io/badge/license-GPL--3.0-555" alt="GPL-3.0">
@@ -11,9 +11,9 @@
 Runs the Xbox Series build of the title on a Windows PC, from your own copy. **Best on AMD Radeon** (tested on an RX 9070 XT), works on other DirectX 12 cards.
 **No game files here:** you need your own copy of the title.
 
-## Stable: v26.11.1 (27 Nov 2026)
+## Stable: v26.11.3 (27 Nov 2026)
 
-### [Download KLBF Lab v26.11.1 (KLBF-Lab-win64.zip)](https://github.com/PastiiJay/klbf-lab/releases/latest/download/KLBF-Lab-win64.zip)
+### [Download KLBF Lab v26.11.3 (KLBF-Lab-win64.zip)](https://github.com/PastiiJay/klbf-lab/releases/latest/download/KLBF-Lab-win64.zip)
 
 - **Auto-update:** one click, your saves and settings kept.
 - **Desktop shortcut,** like any game.
@@ -29,11 +29,11 @@ Runs the Xbox Series build of the title on a Windows PC, from your own copy. **B
 **Start in 4 steps**
 
 1. **Extract** the zip anywhere.
-2. **Double-click "KLBF Lab.vbs"** (Windows may hide the ".vbs" part: it's the file with the script icon). Later, use the desktop shortcut it can create.
+2. **Double-click "KLBF Lab.cmd"** (Windows may hide the ".cmd" part). Later, use the desktop shortcut it can create.
 3. **Choose your game folder** (your own copy).
 4. **Play.**
 
-The first start prepares the shaders (one progress bar, once) and downloads two official components, each file checked: Microsoft's DirectX 12 Agility SDK and AMD FSR (FidelityFX SDK v2.4.0). KLBF Lab is not signed: if Windows SmartScreen shows up, click "More info" then "Run anyway". [Release page](https://github.com/PastiiJay/klbf-lab/releases/latest) (SHA-256 of the zip) · source: branch [`stable-amd`](https://github.com/PastiiJay/klbf-lab/tree/stable-amd), tag `v26.11.1`.
+The first start prepares the shaders (one progress bar, once) and downloads two official components, each file checked: Microsoft's DirectX 12 Agility SDK and AMD FSR (FidelityFX SDK v2.4.0). KLBF Lab is not signed: if Windows SmartScreen shows up, click "More info" then "Run anyway". [Release page](https://github.com/PastiiJay/klbf-lab/releases/latest) (SHA-256 of the zip) · source: branch [`stable-amd`](https://github.com/PastiiJay/klbf-lab/tree/stable-amd), tag `v26.11.3`. Already on v26.11.1 or v26.11.2? Click **Update** in the launcher.
 
 **Measured on our PC** (RX 9070 XT, Ryzen 7 9800X3D, 32 GB):
 
@@ -51,17 +51,42 @@ The first start prepares the shaders (one progress bar, once) and downloads two 
 | Video memory | 16 GB recommended |
 | RAM | 32 GB recommended |
 
-Fixes in this version: RX 6000 device loss at world load (#127), an AMD compiler crash on RX 9070 XT, the high-performance GPU on laptops with two GPUs (#47). Everything, with every switch: **[CHANGELOG.md](https://github.com/PastiiJay/klbf-lab/blob/v26.11.1/CHANGELOG.md)**.
+Fixes since the first stable: the launcher opens on PCs where antivirus or restricted Windows blocked its screen helper (v26.11.2), and it now starts from "KLBF Lab.cmd" because Windows Defender wrongly flagged the old ".vbs" starter (v26.11.3). Also in this stable: RX 6000 device loss at world load (#127), an AMD compiler crash on RX 9070 XT, the high-performance GPU on laptops with two GPUs (#47). Everything, with every switch: **[CHANGELOG.md](https://github.com/PastiiJay/klbf-lab/blob/v26.11.3/CHANGELOG.md)**.
 
 ## Benchmark
 
-KLBF Lab Bench BM-v1: 5 minutes, hands-off, the same scene for everyone, with a certified card at the end. [How to run it](docs/klbf/BENCH-BM-V1.md) (make the save once: [how](docs/klbf/BENCH-BM-V1.md#make-the-save-once)) · [results by hardware](docs/klbf/BAYSIDE-MORNING-V1.md) · post yours with the [Bench result form](https://github.com/PastiiJay/klbf-lab/issues/new?template=bench-bm-v1.yml).
+KLBF Lab Bench BM-v1: 5 minutes, hands-off, wherever you like in the game, with a certified card at the end. Say where you were on your post (city, countryside, indoors, night...). [How to run it](docs/klbf/BENCH-BM-V1.md) · [results by hardware](docs/klbf/BAYSIDE-MORNING-V1.md) · post yours with the [Bench result form](https://github.com/PastiiJay/klbf-lab/issues/new?template=bench-bm-v1.yml).
 
 Issues and test reports: [this repository's issues](https://github.com/PastiiJay/klbf-lab/issues).
 
+## What we want to improve
+
+Everything we have seen and want to make better, from your reports and our own play. **No particular order**, and no dates: each item ships when it works.
+
+- **Crash in the first minutes** on some PCs while shaders build (#116, #69): cause found, fix in testing.
+- **Crash at launch on a few PCs** (#136): we know where it stops, we are logging why.
+- **Glowing eyes** in dark scenes.
+- **Silent voice** during phone calls.
+- **Invisible faces** on some characters.
+- **Flickering trees.**
+- **Too much bloom** on RX 7000 cards.
+- **Green-tinted vehicles** on RX 6000 cards.
+- **Keyboard and mouse** support.
+- **Controller rumble.**
+- **Frame generation on RX 6000 / 7000** (FSR 3), and a key to pause it while playing.
+- **Lower RAM use** for PCs with 16 GB.
+- **Ultrawide** without black bars.
+- **Launcher:** an "Update" button in place of "Play" when an update is out, a game folder check that names missing files, the crash report shown in the launcher.
+- **Bench:** a "where were you" note on the card, and a save ID so cards from the same save can be compared.
+- **Image quality:** texture detail, sky and colour issues.
+- **NVIDIA:** better support, DLSS.
+
+Seen something else? [Open an issue](https://github.com/PastiiJay/klbf-lab/issues).
+
 ## Credits
 
-**v26.11.1:**
+**v26.11.1 to v26.11.3:**
+- **INGLIP**, **deydey103** and **Solar**: the launcher error reports behind v26.11.2.
 - **Op-lite's victory-scarlett** (no longer public): the base this version is built on.
 - **cool_fox**: ambient light estimate; **Ryuki**: foliage fix.
 - **[eikkapine](https://github.com/eikkapine)** (victory-amd): the ideas behind the experimental switches.

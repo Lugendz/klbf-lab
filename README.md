@@ -36,7 +36,7 @@ cargo build --profile diag -p victory --features diagnostics --locked
 .\play.ps1 -Game 'D:\Path\To\YourDump'
 ```
 
-Your own dump of the title is needed; nothing of the title is in this repository. Known issues: some vehicles partly green, some trees see-through, tree shadows flashing at times, dark patches on far ground, effects still compiling during the first sessions. Plan on 32 GB of RAM. Based on [Op-lite/victory-scarlett](https://github.com/Op-lite/victory-scarlett) and [Yaekai/victory-scarlett-3070](https://github.com/Yaekai/victory-scarlett-3070); credits in the branch's README.
+Your own dump of the title is needed; nothing of the title is in this repository. Known issues: some vehicles partly green, some trees see-through, tree shadows flashing at times, dark patches on far ground, effects still compiling during the first sessions. Plan on 32 GB of RAM. **[Quick fixes](https://github.com/PastiiJay/klbf-lab/tree/stable#klbf-lab--amd-beta-branch-beta-amd)** for RX 6000 device losses, RX 9000 faces and Linux slowdowns, one line each, while the next build is made. Based on [Op-lite/victory-scarlett](https://github.com/Op-lite/victory-scarlett) and [Yaekai/victory-scarlett-3070](https://github.com/Yaekai/victory-scarlett-3070); credits in the branch's README.
 
 ## In development: AMD build (27 Nov 2026)
 

@@ -40,10 +40,11 @@ Your own dump of the title is needed; nothing of the title is in this repository
 
 ## In development: AMD build (27 Nov 2026)
 
-Not released yet. Measured on our machine (Radeon RX 9070 XT 16 GB, Ryzen 7 9800X3D, 32 GB RAM) with an in-development build of the AMD line:
+Not released yet. Measured on our machine (Radeon RX 9070 XT 16 GB, Ryzen 7 9800X3D, 32 GB RAM, Windows 11) with an in-development build of the AMD line:
 
 | Build | Mode | Average | Minimum after loading | Run | Crashes |
 |---|---|---|---|---|---|
+| AMD line, in development (27 Nov) | Profile X + FSR 4 Balanced (847p → 1440p), frame generation x2 | **30.2 fps with frame generation** (base 16.0 real; real-frame median 17.3, 1 % low 5.4) | | BM-v1, 5:00, certified | |
 | AMD line, in development (27 Nov) | Series S + FSR 4 | **21.8 fps** | 16.0 fps | 60 min in the world, scripted input, ended by us | none |
 | AMD line, in development (27 Nov) | Series S + FSR 4 | 21.1 fps | 9.6 fps | 60 min in the world, scripted input, ended by us | none |
 | AMD beta v12 ([`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd), released) | Series X, native | 16.4 fps (1 % low 8.7, 0 freezes) | | BM-v1, 5 min, certified | none |

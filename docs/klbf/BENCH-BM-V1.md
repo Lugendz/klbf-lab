@@ -47,8 +47,9 @@ and keep your save files to yourself: they can carry your console profile's ids.
    - `KLBF_BENCH_PLAYER=<GitHub login>` is written on the card (otherwise "anonymous"). The board
      only lists a run whose player is the submitter's GitHub login or "anonymous".
    - `VICTORY_SKIP_MOVIES=end` skips the intro movies.
-2. Start the game, load the save and press **Continue**. If Continue does not bring you to the
-   morning save, use **Load** and pick slot 1 (it sits one line lower, under the automatic save).
+2. Press **Continue** and check the first scene. The male lead should be in the laundry room with the
+   fishing book in hand. If he is in front of the TV, Continue picked a different save. End that
+   run and restart the bench. From the menu, choose **Load** and pick slot 1 below the autosave.
 3. Touch nothing.
 
 ```powershell

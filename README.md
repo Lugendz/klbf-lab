@@ -4,7 +4,7 @@
   <a href="#in-development-amd-build-27-nov-2026"><img src="https://img.shields.io/badge/in%20development%20(unreleased)-21.8%20fps%20avg%2C%2060%20min%20no%20crash-e05d44" alt="in development, unreleased: 21.8 fps average over 60 minutes without a crash"></a>
   <a href="https://github.com/PastiiJay/klbf-lab/tree/beta-amd"><img src="https://img.shields.io/badge/AMD%20beta%20v12-16.4%20fps%20avg%2C%20BM--v1%20Series%20X-2ea44f" alt="AMD beta v12: 16.4 fps average, BM-v1, Series X"></a>
   <a href="https://github.com/PastiiJay/klbf-lab/tree/beta-2"><img src="https://img.shields.io/badge/real%20play-14.0%20fps%20avg%2C%2037%20min-2ea44f" alt="real play: 14.0 fps average over 37 minutes"></a>
-  <img src="https://img.shields.io/badge/stable%20code%20on%20main-Lab%2035-1f46c8" alt="stable code on main: Lab 35">
+  <a href="https://github.com/PastiiJay/klbf-lab/tree/stable"><img src="https://img.shields.io/badge/stable-v12%20%C2%B7%2060%20min%20certified-1f46c8" alt="stable: v12, 60 minutes certified"></a>
   <img src="https://img.shields.io/badge/license-GPL--3.0-555" alt="GPL-3.0">
   <a href="https://github.com/PastiiJay/klbf-lab/tree/beta-2"><img src="https://img.shields.io/badge/new%20test%20build-Lab%2063%20(beta--2)-2ea44f" alt="new test build: Lab 63 on beta-2"></a>
   <a href="docs/klbf/MEASUREMENT.md"><img src="https://img.shields.io/badge/fps-shared%20measurement%20method-2ea44f" alt="shared measurement method"></a>
@@ -18,6 +18,25 @@ This is the one version we recommend. It is meant for every graphics card; so fa
 
 > [!TIP]
 > **Playing on Linux / Proton?** Our Linux work is led by community member **[@zocram4cc](https://github.com/zocram4cc)**: see his Wine/Proton fixes ([#34](https://github.com/PastiiJay/klbf-lab/pull/34), [#35](https://github.com/PastiiJay/klbf-lab/pull/35)), the [Linux notes in the guide](docs/GUIDE.md#linux--proton-community-notes) and the RX 7800 XT report by [@Adiker](https://github.com/Adiker) ([#19](https://github.com/PastiiJay/klbf-lab/issues/19)). Post Linux results in an issue and tag @zocram4cc.
+
+## Stable: v12 on [`stable`](https://github.com/PastiiJay/klbf-lab/tree/stable) (27 Nov 2026)
+
+The version we recommend: the AMD line v12 (tag `v12-stable`, same code as [`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd) at `4cadfd4`). Played on an RX 9070 XT before release, then certified by the bench:
+
+| Mode | Average | 1 % low | Run |
+|---|---|---|---|
+| Series S + FSR 4 | **18.5 fps** | 9.3 | BM-v1, 5 min, certified |
+| Series X, native | 16.4 fps | 8.7 | BM-v1, 5 min, certified, 0 freezes |
+| Series X, native | 16.9 fps | 7.5 | BM-v1 Marathon, **60 min without a crash**, certified (peak RAM 18.5 GB, peak VRAM 12.2 GB) |
+
+```powershell
+git clone -b stable https://github.com/PastiiJay/klbf-lab
+cd klbf-lab
+cargo build --profile diag -p victory --features diagnostics --locked
+.\play.ps1 -Game 'D:\Path\To\YourDump'
+```
+
+Your own dump of the title is needed; nothing of the title is in this repository. Known issues: some vehicles partly green, some trees see-through, tree shadows flashing at times, dark patches on far ground, effects still compiling during the first sessions. Plan on 32 GB of RAM. Based on [Op-lite/victory-scarlett](https://github.com/Op-lite/victory-scarlett) and [Yaekai/victory-scarlett-3070](https://github.com/Yaekai/victory-scarlett-3070); credits in the branch's README.
 
 ## In development: AMD build (27 Nov 2026)
 

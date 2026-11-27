@@ -63,23 +63,18 @@ Issues and test reports: [this repository's issues](https://github.com/PastiiJay
 
 Everything we have seen and want to make better, from your reports and our own play. **No particular order**, and no dates: each item ships when it works.
 
-- **Crash in the first minutes** on some PCs while shaders build (#116, #69): cause found, fix in testing.
-- **Crash at launch on a few PCs** (#136): we know where it stops, we are logging why.
-- **Reflections too bright** in dark scenes.
-- **Audio:** one type of audio effect is still silent.
-- **Missing geometry** on some models.
-- **Flickering** on some indirect draws.
-- **Too much bloom** on RX 7000 cards.
-- **Colour tint** on some materials on RX 6000 cards.
-- **Keyboard and mouse** support.
+- **Crashes** at launch and in the first minutes on some PCs.
+- **Brightness** issues in some scenes.
+- **Graphics issues** on some objects: flickering, missing parts, colours.
+- **Shadows.**
+- **Sound:** some effects are still silent.
+- **Keyboard and mouse.**
 - **Controller vibration.**
-- **Frame generation on RX 6000 / 7000** (FSR 3), and a key to pause it while playing.
-- **Lower RAM use** for PCs with 16 GB.
-- **Ultrawide** without black bars.
-- **Launcher:** an "Update" button in place of "Play" when an update is out, a game folder check that names missing files, the crash report shown in the launcher.
-- **Bench:** a "where were you" note on the card, and a save ID so cards from the same save can be compared.
-- **Image quality:** texture formats, colour and lighting accuracy.
-- **NVIDIA:** better support, DLSS.
+- **Frame generation** on more cards.
+- **Lower RAM use.**
+- **Ultrawide.**
+- **Launcher and bench** improvements.
+- **NVIDIA** support.
 
 Seen something else? [Open an issue](https://github.com/PastiiJay/klbf-lab/issues).
 

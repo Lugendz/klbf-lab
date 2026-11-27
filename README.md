@@ -72,7 +72,7 @@ Everything we have seen and want to make better, from your reports and our own p
 - **Controller vibration.**
 - **Frame generation** on more cards.
 - **Lower RAM use.**
-- **Ultrawide.**
+- **Ultrawide screens.**
 - **Launcher and bench** improvements.
 - **NVIDIA** support.
 

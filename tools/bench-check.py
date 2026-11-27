@@ -12,6 +12,8 @@ import argparse, hashlib, json, math, re, sys
 from pathlib import Path
 
 TARGET_S = 300
+# 27/11: -BenchLength runs: 5 (BM-v1), 15 (Medium), 30 (Long) or 60 (Marathon) minutes.
+TARGETS = {300: '', 900: '-Medium', 1800: '-Long', 3600: '-Marathon'}
 FIELDS = {
     'schema': int, 'bench': str, 'test': str, 'test_id': str, 'stamp': str, 'reason': str, 'stop': str, 'serial': str,
     'date': str, 'project': str, 'project_source': str, 'sha': str, 'player': str, 'gpu': str,
@@ -52,11 +54,12 @@ def check(d, name=None, login=None):
         p.append('settings: not an object')
     if p:
         return p
-    if (d['schema'], d['bench'], d['test'], d['test_id']) != (1, 'KLBF Lab Bench', 'Bayside Morning v1', 'BM-v1'):
+    if (d['schema'], d['bench'], d['test']) != (1, 'KLBF Lab Bench', 'Bayside Morning v1') or d['test_id'] != 'BM-v1' + TARGETS.get(d['target_s'], '?'):
         p.append('not a BM-v1 result')
     # Duration: the full 5:00 from the first world frame.
-    if d['target_s'] != TARGET_S or d['duration_s'] < TARGET_S or d['stop'] != '5:00 reached':
-        p.append(f"duration {d['duration_s']} s / stop '{d['stop']}': the 5:00 run did not complete")
+    target = d['target_s'] if d['target_s'] in TARGETS else TARGET_S
+    if d['target_s'] not in TARGETS or d['duration_s'] < target or d['stop'] not in ('5:00 reached', 'the full time reached'):
+        p.append(f"duration {d['duration_s']} s / stop '{d['stop']}': the {target // 60}:00 run did not complete")
     # Verdict, re-derived with the game's rules.
     n, longest = d['frames'], d['longest_frame_ms']
     if d['stamp'] != 'CERTIFIED':
@@ -74,8 +77,8 @@ def check(d, name=None, login=None):
     if a['avg'] <= R2 or longest <= 0:
         return p + ['no frame rate']
     total_hi, total_lo = n / (a['avg'] - R2), n / (a['avg'] + R2)  # seconds of frames
-    if total_hi < TARGET_S - 0.1 or total_lo > TARGET_S + longest / 1000 + 0.1:
-        p.append(f"frames / avg fps = {n / a['avg']:.1f} s, not the 5:00 measured")
+    if total_hi < target - 0.1 or total_lo > target + longest / 1000 + 0.1:
+        p.append(f"frames / avg fps = {n / a['avg']:.1f} s, not the {target // 60}:00 measured")
     # Min and max: the slowest and fastest 1-second windows (the average when there is none).
     lo, hi = (min(per_s), max(per_s)) if per_s else (a['avg'], a['avg'])
     if abs(a['min'] - lo) > 2 * R2 or abs(a['max'] - hi) > 2 * R2:
@@ -92,7 +95,7 @@ def check(d, name=None, login=None):
     s = d['serial']
     if s != serial(d):
         p.append(f'serial {s} does not match the content (expected {serial(d)}): the file was changed')
-    if name is not None and not re.fullmatch(rf'KLBF-Bench-BM-v1-(?:\d{{8}}-\d{{4}}-)?{re.escape(s)}\.json', Path(name).name):
+    if name is not None and not re.fullmatch(rf'KLBF-Bench-BM-v1(?:-Medium|-Long|-Marathon)?-(?:\d{{8}}-\d{{4}}-)?{re.escape(s)}\.json', Path(name).name):
         p.append(f'file name does not match serial {s}')
     if not d['share'].endswith(f"| {d['stamp']} | {s}") or f"{d['project']}@{d['sha']}" not in d['share']:
         p.append('share line does not match the result')

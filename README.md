@@ -1,69 +1,100 @@
 <p align="center"><img src="docs/klbf/logo.svg" width="120" alt="KLBF Lab"></p>
 <h1 align="center">KLBF Lab</h1>
 <p align="center">
-  <a href="#in-development-amd-build-27-nov-2026"><img src="https://img.shields.io/badge/in%20development%20(unreleased)-21.8%20fps%20avg%2C%2060%20min%20no%20crash-e05d44" alt="in development, unreleased: 21.8 fps average over 60 minutes without a crash"></a>
-  <a href="https://github.com/PastiiJay/klbf-lab/tree/beta-amd"><img src="https://img.shields.io/badge/AMD%20beta%20v12-16.4%20fps%20avg%2C%20BM--v1%20Series%20X-2ea44f" alt="AMD beta v12: 16.4 fps average, BM-v1, Series X"></a>
-  <a href="https://github.com/PastiiJay/klbf-lab/tree/beta-2"><img src="https://img.shields.io/badge/real%20play-14.0%20fps%20avg%2C%2037%20min-2ea44f" alt="real play: 14.0 fps average over 37 minutes"></a>
-  <a href="https://github.com/PastiiJay/klbf-lab/tree/stable"><img src="https://img.shields.io/badge/stable-v12%20%C2%B7%2060%20min%20certified-1f46c8" alt="stable: v12, 60 minutes certified"></a>
+  <a href="https://github.com/PastiiJay/klbf-lab/releases/latest"><img src="https://img.shields.io/badge/stable-v26.11.1-1f46c8" alt="stable: v26.11.1"></a>
+  <a href="#stable-v26111-27-nov-2026"><img src="https://img.shields.io/badge/BM--v1%20certified-30.2%20fps%20with%20frame%20generation%20(base%2016.0)-2ea44f" alt="BM-v1 certified: 30.2 fps with frame generation, base 16.0"></a>
+  <a href="#stable-v26111-27-nov-2026"><img src="https://img.shields.io/badge/real%20play-60%20min%20without%20a%20crash-2ea44f" alt="60 minutes of play without a crash"></a>
   <img src="https://img.shields.io/badge/license-GPL--3.0-555" alt="GPL-3.0">
-  <a href="https://github.com/PastiiJay/klbf-lab/tree/beta-2"><img src="https://img.shields.io/badge/new%20test%20build-Lab%2063%20(beta--2)-2ea44f" alt="new test build: Lab 63 on beta-2"></a>
   <a href="docs/klbf/MEASUREMENT.md"><img src="https://img.shields.io/badge/fps-shared%20measurement%20method-2ea44f" alt="shared measurement method"></a>
 </p>
 
-<p align="center"><b>Played from a new game to the open world: the first character's prologue and the second character's first mission completed, free roam from the second character's house, on an AMD Radeon RX 9070 XT.</b></p>
+Runs the Xbox Series build of the title on a Windows PC, from your own copy. **Best on AMD Radeon** (tested on an RX 9070 XT), works on other DirectX 12 cards.
+**No game files here:** you need your own copy of the title.
+
+## Stable: v26.11.1 (27 Nov 2026)
+
+### [Download KLBF Lab v26.11.1 (KLBF-Lab-win64.zip)](https://github.com/PastiiJay/klbf-lab/releases/latest/download/KLBF-Lab-win64.zip)
+
+- **Auto-update:** one click, your saves and settings kept.
+- **Desktop shortcut,** like any game.
+- **A settings window with every option:** Profile X / S, AMD FSR 4, FSR 3.1 or the built-in upscaler, presets, output size, frame generation (FG x2), screen choice, window or borderless fullscreen.
+- **Shaders prepared once,** with a real progress bar.
+- **Built-in benchmark** with certified cards you can share.
+- **Built-in save manager:** slots, a backup before every launch, restore, copy over.
+- **In game:** F8 screenshots with your stats, F10 settings, F11 restart, Alt+Enter fullscreen.
+- **Live stats in the title bar:** fps, base fps, 1 % low, upscaler, VRAM, RAM.
+- **Privacy:** no paths, user or PC names shown unless you press Show.
+- **Works on AMD RX 6000 / 7000 / 9000 and NVIDIA RTX 20 and newer** (FSR 3.1 outside RDNA 4).
+
+**Start in 4 steps**
+
+1. **Extract** the zip anywhere.
+2. **Double-click "KLBF Lab.vbs"** (Windows may hide the ".vbs" part: it's the file with the script icon). Later, use the desktop shortcut it can create.
+3. **Choose your game folder** (your own copy).
+4. **Play.**
+
+The first start prepares the shaders (one progress bar, once) and downloads two official components, each file checked: Microsoft's DirectX 12 Agility SDK and AMD FSR (FidelityFX SDK v2.4.0). KLBF Lab is not signed: if Windows SmartScreen shows up, click "More info" then "Run anyway". [Release page](https://github.com/PastiiJay/klbf-lab/releases/latest) (SHA-256 of the zip) · source: branch [`stable-amd`](https://github.com/PastiiJay/klbf-lab/tree/stable-amd), tag `v26.11.1`.
+
+**Measured on our PC** (RX 9070 XT, Ryzen 7 9800X3D, 32 GB):
+
+<!-- latest-run-start -->
+> **Latest run:** 2026-11-27 · **v26.11.1** · Profile X, FSR 4 Balanced 847p → 1440p, frame generation x2 · Radeon RX 9070 XT / Ryzen 7 9800X3D / 32 GB · **30.2 fps with frame generation (base 16.0)**, BM-v1 5:00 certified
+> <!-- latest-run-end -->
+
+- **60 min of play without a crash** on this version.
+
+**Requirements**
+
+| | |
+|---|---|
+| Graphics card | AMD Radeon RDNA 2, 3 or 4 (RX 6000, 7000, 9000), NVIDIA GeForce RTX 20 series or newer |
+| Video memory | 16 GB recommended |
+| RAM | 32 GB recommended |
+
+Fixes in this version: RX 6000 device loss at world load (#127), an AMD compiler crash on RX 9070 XT, the high-performance GPU on laptops with two GPUs (#47). Everything, with every switch: **[CHANGELOG.md](https://github.com/PastiiJay/klbf-lab/blob/v26.11.1/CHANGELOG.md)**.
+
+## Benchmark
+
+KLBF Lab Bench BM-v1: 5 minutes, hands-off, the same scene for everyone, with a certified card at the end. [How to run it](docs/klbf/BENCH-BM-V1.md) (make the save once: [how](docs/klbf/BENCH-BM-V1.md#make-the-save-once)) · [results by hardware](docs/klbf/BAYSIDE-MORNING-V1.md) · post yours with the [Bench result form](https://github.com/PastiiJay/klbf-lab/issues/new?template=bench-bm-v1.yml).
+
+Issues and test reports: [this repository's issues](https://github.com/PastiiJay/klbf-lab/issues).
+
+## Credits
+
+**v26.11.1:**
+- **Op-lite's victory-scarlett** (no longer public): the base this version is built on.
+- **cool_fox**: ambient light estimate; **Ryuki**: foliage fix.
+- **[eikkapine](https://github.com/eikkapine)** (victory-amd): the ideas behind the experimental switches.
+- **MalarkZA**, **[kyokyotosh](https://github.com/kyokyotosh)** and **HandshakeHackin**: the RX 6000 device-loss fix (#127).
+- **BrokeAsh** and **KingKaom**: diagnosing the AMD compiler crash on RX 9070 XT.
+- **ParaNyx**: the bench fade report (#124).
+- **AMD**: FidelityFX FSR 4; **Microsoft**: DirectX 12 Agility SDK.
+- **avatarmanz** and every tester who posted a bench or a log.
+
+**Earlier builds (the `main` code, which other launchers build):**
+- [@Marvisak](https://github.com/Marvisak) for [VIctory](https://github.com/Marvisak/VIctory), and [@fxceless](https://github.com/fxceless) (hyphennn) for [victory-fork](https://github.com/fxceless/victory-fork), the base of KLBF Lab.
+- [@myokex](https://github.com/myokex) ([victory-amd](https://github.com/myokex/victory-amd)): missing walls on AMD.
+- [@Geckomacabre](https://github.com/Geckomacabre) (vx-layer) and [@MiamiGame](https://github.com/MiamiGame) ([XTP](https://github.com/MiamiGame/XTP)): the water physics fix (test builds).
+- [@BrokeAsh](https://github.com/BrokeAsh): the RDNA 4 shader compiler workaround; [@gmankab](https://github.com/gmankab) (with AugustoZFJ's original fix): Wine pipeline caching and docs; [@HandshakeHackin](https://github.com/HandshakeHackin): test tools and fixes.
+- Upstream VIctory pull requests #334, #1271, #1599 and #1696, and the DirectStorage analysis by JappertjeV.
+
+**Testers and reporters:** [@clems206](https://github.com/clems206), [@TG0000](https://github.com/TG0000), [@BlackBu7let](https://github.com/BlackBu7let), [@kzrts](https://github.com/kzrts), and [@HishamMuhammed](https://github.com/HishamMuhammed), whose questions shaped the [beginner's guide](docs/GUIDE.md).
+
+<details>
+<summary><b>Earlier builds on <code>main</code> (Lab 35 to Lab 63, 24–26 Nov 2026)</b></summary>
 
 An open lab that runs the Xbox Series X|S (Scarlett) build of the game natively on a Windows PC: a GDK compatibility layer (`kernelx`, `xgameruntime`, `d3d12_xs` → host D3D12, RDNA2 → DXIL shader translation) that combines the best fixes from open compatibility projects into one tested build. Our own fixes (AMD Radeon stability and rendering, water physics, pre-building pipelines, optional AMD FSR frame generation) and fixes from other contributors, credited below.
-
-This is the one version we recommend. It is meant for every graphics card; so far we have tested it on an AMD Radeon RX 9070 XT, and reports from other cards (NVIDIA, Intel, other AMD) are very welcome. New builds are tried first on the **[`beta` branch](https://github.com/PastiiJay/klbf-lab/tree/beta)** of this repository (test builds); issues and test reports go in [this repository's issues](https://github.com/PastiiJay/klbf-lab/issues).
 
 > [!TIP]
 > **Playing on Linux / Proton?** Our Linux work is led by community member **[@zocram4cc](https://github.com/zocram4cc)**: see his Wine/Proton fixes ([#34](https://github.com/PastiiJay/klbf-lab/pull/34), [#35](https://github.com/PastiiJay/klbf-lab/pull/35)), the [Linux notes in the guide](docs/GUIDE.md#linux--proton-community-notes) and the RX 7800 XT report by [@Adiker](https://github.com/Adiker) ([#19](https://github.com/PastiiJay/klbf-lab/issues/19)). Post Linux results in an issue and tag @zocram4cc.
 
-## Stable: v12 on [`stable`](https://github.com/PastiiJay/klbf-lab/tree/stable) (27 Nov 2026)
-
-The version we recommend: the AMD line v12 (tag `v12-stable`, same code as [`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd) at `ffcfb00`). Played on an RX 9070 XT before release, then certified by the bench:
-
-| Mode | Average | 1 % low | Run |
-|---|---|---|---|
-| Series S + FSR 4 | **18.5 fps** | 9.3 | BM-v1, 5 min, certified |
-| Series X, native | 16.4 fps | 8.7 | BM-v1, 5 min, certified, 0 freezes |
-| Series X, native | 16.9 fps | 7.5 | BM-v1 Marathon, **60 min without a crash**, certified (peak RAM 18.5 GB, peak VRAM 12.2 GB) |
-
-```powershell
-git clone -b stable https://github.com/PastiiJay/klbf-lab
-cd klbf-lab
-cargo build --profile diag -p victory --features diagnostics --locked
-.\play.ps1 -Game 'D:\Path\To\YourDump'
-```
-
-Your own dump of the title is needed; nothing of the title is in this repository. Known issues: some vehicles partly green, some trees see-through, tree shadows flashing at times, dark patches on far ground, effects still compiling during the first sessions. Plan on 32 GB of RAM. **[Quick fixes](https://github.com/PastiiJay/klbf-lab/tree/stable#klbf-lab--amd-beta-branch-beta-amd)** for RX 6000 device losses, RX 9000 faces and Linux slowdowns, one line each, while the next build is made. Based on [Op-lite/victory-scarlett](https://github.com/Op-lite/victory-scarlett) and [Yaekai/victory-scarlett-3070](https://github.com/Yaekai/victory-scarlett-3070); credits in the branch's README.
-
-## In development: AMD build (27 Nov 2026)
-
-Not released yet. Measured on our machine (Radeon RX 9070 XT 16 GB, Ryzen 7 9800X3D, 32 GB RAM, Windows 11) with an in-development build of the AMD line:
-
-| Build | Mode | Average | Minimum after loading | Run | Crashes |
-|---|---|---|---|---|---|
-| AMD line, in development (27 Nov) | Profile X + FSR 4 Balanced (847p → 1440p), frame generation x2 | **30.2 fps with frame generation** (base 16.0 real; real-frame median 17.3, 1 % low 5.4) | | BM-v1, 5:00, certified | |
-| AMD line, in development (27 Nov) | Series S + FSR 4 | **21.8 fps** | 16.0 fps | 60 min in the world, scripted input, ended by us | none |
-| AMD line, in development (27 Nov) | Series S + FSR 4 | 21.1 fps | 9.6 fps | 60 min in the world, scripted input, ended by us | none |
-| AMD beta v12 ([`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd), released) | Series X, native | 16.4 fps (1 % low 8.7, 0 freezes) | | BM-v1, 5 min, certified | none |
-| AMD beta v12 ([`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd), released) | Series S + FSR 4 | **18.5 fps** (1 % low 9.3) | | BM-v1, 5 min, certified | none |
-| AMD beta v12 ([`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd), released) | Series X, native | 16.9 fps (1 % low 7.5, peak RAM 18.5 GB, peak VRAM 12.2 GB) | | BM-v1 Marathon, **60 min, certified** | none |
-
-**Peaks at 30 fps in the world** on the in-development AMD build (27 Nov, RX 9070 XT, Series X): 30.3 fps at the top of the 60-minute certified Marathon, up to 26 fps in a real controller session while driving fast across the bridge. Not steady yet: the averages are in the table above.
-
-The in-development figures come from builds still being finished (picture fixes before release); the released beta is v12.
-
 ## New test build: Lab 63 on [`beta-2`](https://github.com/PastiiJay/klbf-lab/tree/beta-2) (26 Nov 2026)
 
-> **AMD beta v12 (27 Nov):** branch [`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd), BM-v1 16.4 fps avg, 1 % low 8.7, 0 freezes on RX 9070 XT (Series X, native) — based on [Op-lite/victory-scarlett](https://github.com/Op-lite/victory-scarlett).
+> **AMD beta v12 (27 Nov):** branch [`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd), BM-v1 16.4 fps avg, 1 % low 8.7, 0 freezes on RX 9070 XT (Series X, native) — based on Op-lite's victory-scarlett.
 >
 > **🧪🌴 New: KLBF Lab Bench · Bayside Morning v1.** A 5-minute hands-off test from the same spot for everyone, input locked, with a certified postcard at the end. [How to run it](docs/klbf/BENCH-BM-V1.md) · [Results by hardware](docs/klbf/BAYSIDE-MORNING-V1.md). Lab 63 also fixes dark faces in shade and skips the intro movie on request.
 >
-> <!-- latest-run-start -->
 > **Latest run:** 2026-11-27 · **AMD beta v12** ([`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd)), Series X, native · Radeon RX 9070 XT / Ryzen 7 9800X3D · 16.4 fps avg (1 % low 8.7, 0 freezes), BM-v1 certified
-> <!-- latest-run-end -->
 
 > **📏 A shared frame-rate standard.** Numbers between projects cannot be compared today (empty seas, menus, one lucky second). We propose one method for everyone: same starting save, same route, three tables (frame rate seen in the world, stability index, average performance index). **[Read the method](docs/klbf/MEASUREMENT.md)**, use it, and post your numbers.
 
@@ -274,16 +305,7 @@ If the device is lost about a minute after the world starts loading (reported on
 
 Please report results in an [issue](https://github.com/PastiiJay/klbf-lab/issues): GPU, driver, how long it ran, fps in the window title, and what looks wrong. Patch notes: [CHANGELOG.md](CHANGELOG.md). Full run log: [docs/klbf/results.md](docs/klbf/results.md).
 
-## Credits
-
-**Code and fixes in our builds come from these people and projects, thank you:**
-- [@Marvisak](https://github.com/Marvisak) for [VIctory](https://github.com/Marvisak/VIctory), and [@fxceless](https://github.com/fxceless) (hyphennn) for [victory-fork](https://github.com/fxceless/victory-fork), the base of KLBF Lab.
-- [@myokex](https://github.com/myokex) ([victory-amd](https://github.com/myokex/victory-amd)): missing walls on AMD.
-- [@Geckomacabre](https://github.com/Geckomacabre) (vx-layer) and [@MiamiGame](https://github.com/MiamiGame) ([XTP](https://github.com/MiamiGame/XTP)): the water physics fix (test builds).
-- [@BrokeAsh](https://github.com/BrokeAsh): the RDNA 4 shader compiler workaround; [@gmankab](https://github.com/gmankab) (with AugustoZFJ's original fix): Wine pipeline caching and docs; [@HandshakeHackin](https://github.com/HandshakeHackin): test tools and fixes.
-- Upstream VIctory pull requests #334, #1271, #1599 and #1696, and the DirectStorage analysis by JappertjeV.
-
-**Testers and reporters:** [@clems206](https://github.com/clems206), [@TG0000](https://github.com/TG0000), [@BlackBu7let](https://github.com/BlackBu7let), [@kzrts](https://github.com/kzrts), and [@HishamMuhammed](https://github.com/HishamMuhammed), whose questions shaped the [beginner's guide](docs/GUIDE.md).
+</details>
 
 KLBF Lab started from [VIctory](https://github.com/Marvisak/VIctory) by Marvisak and the [fxceless/victory-fork](https://github.com/fxceless/victory-fork); it is GPL-3.0 like them, and keeps their copyright notices. Fixes ported from other projects are credited where they are used, above and in the commit messages.
 

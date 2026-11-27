@@ -110,7 +110,7 @@ def main():
     readme = ROOT / 'README.md'
     text = readme.read_text(encoding='utf-8')
     # The README shows OUR latest reference run (the KLBF Lab test machine), never a community run:
-    # community results live in the board (Yvan, 26/11: the homepage must stay under our control).
+    # community results live in the board (26/11: the homepage must stay under our control).
     refs = [r for r in rows if bc.REFERENCE in r[4]]
     line = max(refs, key=lambda r: r[2])[4] if refs else '> _Latest run: none yet._'
     new, n = re.subn(r'(<!-- latest-run-start -->\n).*?(\n> ?<!-- latest-run-end -->)',

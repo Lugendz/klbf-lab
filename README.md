@@ -28,6 +28,8 @@ Not released yet. Measured on our machine (Radeon RX 9070 XT 16 GB, Ryzen 7 9800
 | AMD line, in development (27 Nov) | Series S + FSR 4 | **21.8 fps** | 16.0 fps | 60 min in the world, scripted input, ended by us | none |
 | AMD line, in development (27 Nov) | Series S + FSR 4 | 21.1 fps | 9.6 fps | 60 min in the world, scripted input, ended by us | none |
 | AMD beta v12 ([`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd), released) | Series X, native | 16.4 fps (1 % low 8.7, 0 freezes) | | BM-v1, 5 min, certified | none |
+| AMD beta v12 ([`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd), released) | Series S + FSR 4 | **18.5 fps** (1 % low 9.3) | | BM-v1, 5 min, certified | none |
+| AMD beta v12 ([`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd), released) | Series X, native | 16.9 fps (1 % low 7.5, peak RAM 18.5 GB, peak VRAM 12.2 GB) | | BM-v1 Marathon, **60 min, certified** | none |
 
 The in-development figures come from builds still being finished (picture fixes before release); the released beta is v12.
 

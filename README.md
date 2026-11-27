@@ -21,7 +21,7 @@ This is the one version we recommend. It is meant for every graphics card; so fa
 
 ## Stable: v12 on [`stable`](https://github.com/PastiiJay/klbf-lab/tree/stable) (27 Nov 2026)
 
-The version we recommend: the AMD line v12 (tag `v12-stable`, same code as [`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd) at `4cadfd4`). Played on an RX 9070 XT before release, then certified by the bench:
+The version we recommend: the AMD line v12 (tag `v12-stable`, same code as [`beta-amd`](https://github.com/PastiiJay/klbf-lab/tree/beta-amd) at `ffcfb00`). Played on an RX 9070 XT before release, then certified by the bench:
 
 | Mode | Average | 1 % low | Run |
 |---|---|---|---|

@@ -65,20 +65,20 @@ Everything we have seen and want to make better, from your reports and our own p
 
 - **Crash in the first minutes** on some PCs while shaders build (#116, #69): cause found, fix in testing.
 - **Crash at launch on a few PCs** (#136): we know where it stops, we are logging why.
-- **Glowing eyes** in dark scenes.
-- **Silent voice** during phone calls.
-- **Invisible faces** on some characters.
-- **Flickering trees.**
+- **Reflections too bright** in dark scenes.
+- **Audio:** one type of audio effect is still silent.
+- **Missing geometry** on some models.
+- **Flickering** on some indirect draws.
 - **Too much bloom** on RX 7000 cards.
-- **Green-tinted vehicles** on RX 6000 cards.
+- **Colour tint** on some materials on RX 6000 cards.
 - **Keyboard and mouse** support.
-- **Controller rumble.**
+- **Controller vibration.**
 - **Frame generation on RX 6000 / 7000** (FSR 3), and a key to pause it while playing.
 - **Lower RAM use** for PCs with 16 GB.
 - **Ultrawide** without black bars.
 - **Launcher:** an "Update" button in place of "Play" when an update is out, a game folder check that names missing files, the crash report shown in the launcher.
 - **Bench:** a "where were you" note on the card, and a save ID so cards from the same save can be compared.
-- **Image quality:** texture detail, sky and colour issues.
+- **Image quality:** texture formats, colour and lighting accuracy.
 - **NVIDIA:** better support, DLSS.
 
 Seen something else? [Open an issue](https://github.com/PastiiJay/klbf-lab/issues).

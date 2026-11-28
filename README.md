@@ -1,9 +1,9 @@
 <p align="center"><img src="docs/klbf/logo.svg" width="120" alt="KLBF Lab"></p>
 <h1 align="center">KLBF Lab</h1>
 <p align="center">
-  <a href="https://github.com/PastiiJay/klbf-lab/releases/latest"><img src="https://img.shields.io/badge/stable-v26.11.3-1f46c8" alt="stable: v26.11.3"></a>
-  <a href="#stable-v26111-27-nov-2026"><img src="https://img.shields.io/badge/BM--v1%20certified-30.2%20fps%20with%20frame%20generation%20(base%2016.0)-2ea44f" alt="BM-v1 certified: 30.2 fps with frame generation, base 16.0"></a>
-  <a href="#stable-v26111-27-nov-2026"><img src="https://img.shields.io/badge/real%20play-60%20min%20without%20a%20crash-2ea44f" alt="60 minutes of play without a crash"></a>
+  <a href="https://github.com/PastiiJay/klbf-lab/releases/latest"><img src="https://img.shields.io/badge/stable-v26.11.4-1f46c8" alt="stable: v26.11.4"></a>
+  <a href="#stable-v26114-28-nov-2026"><img src="https://img.shields.io/badge/BM--v1%20certified-30.2%20fps%20with%20frame%20generation%20(base%2016.0)-2ea44f" alt="BM-v1 certified: 30.2 fps with frame generation, base 16.0"></a>
+  <a href="#stable-v26114-28-nov-2026"><img src="https://img.shields.io/badge/real%20play-45%20min%20without%20a%20crash-2ea44f" alt="45 minutes of play without a crash"></a>
   <img src="https://img.shields.io/badge/license-GPL--3.0-555" alt="GPL-3.0">
   <a href="docs/klbf/MEASUREMENT.md"><img src="https://img.shields.io/badge/fps-shared%20measurement%20method-2ea44f" alt="shared measurement method"></a>
 </p>
@@ -11,9 +11,9 @@
 Runs the Xbox Series build of the title on a Windows PC, from your own copy. **Best on AMD Radeon** (tested on an RX 9070 XT), works on other DirectX 12 cards.
 **No game files here:** you need your own copy of the title.
 
-## Stable: v26.11.3 (27 Nov 2026)
+## Stable: v26.11.4 (28 Nov 2026)
 
-### [Download KLBF Lab v26.11.3 (KLBF-Lab-win64.zip)](https://github.com/PastiiJay/klbf-lab/releases/latest/download/KLBF-Lab-win64.zip)
+### [Download KLBF Lab v26.11.4 (KLBF-Lab.zip)](https://github.com/PastiiJay/klbf-lab/releases/latest/download/KLBF-Lab.zip)
 
 - **Auto-update:** one click, your saves and settings kept.
 - **Desktop shortcut,** like any game.
@@ -21,6 +21,7 @@ Runs the Xbox Series build of the title on a Windows PC, from your own copy. **B
 - **Shaders prepared once,** with a real progress bar.
 - **Built-in benchmark** with certified cards you can share.
 - **Built-in save manager:** slots, a backup before every launch, restore, copy over.
+- **Keyboard and mouse** (Controls tab: on/off, sensitivity, invert, keys), next to a controller, with **controller rumble**.
 - **In game:** F8 screenshots with your stats, F10 settings, F11 restart, Alt+Enter fullscreen.
 - **Live stats in the title bar:** fps, base fps, 1 % low, upscaler, VRAM, RAM.
 - **Privacy:** no paths, user or PC names shown unless you press Show.
@@ -28,12 +29,12 @@ Runs the Xbox Series build of the title on a Windows PC, from your own copy. **B
 
 **Start in 4 steps**
 
-1. **Extract** the zip anywhere.
+1. **Extract** the zip anywhere, then open the "KLBF Lab" folder.
 2. **Double-click "KLBF Lab.cmd"** (Windows may hide the ".cmd" part). Later, use the desktop shortcut it can create.
 3. **Choose your game folder** (your own copy).
 4. **Play.**
 
-The first start prepares the shaders (one progress bar, once) and downloads two official components, each file checked: Microsoft's DirectX 12 Agility SDK and AMD FSR (FidelityFX SDK v2.4.0). KLBF Lab is not signed: if Windows SmartScreen shows up, click "More info" then "Run anyway". [Release page](https://github.com/PastiiJay/klbf-lab/releases/latest) (SHA-256 of the zip) · source: branch [`stable-amd`](https://github.com/PastiiJay/klbf-lab/tree/stable-amd), tag `v26.11.3`. Already on v26.11.1 or v26.11.2? Click **Update** in the launcher.
+The first start prepares the shaders (one progress bar, once) and downloads two official components, each file checked: Microsoft's DirectX 12 Agility SDK and AMD FSR (FidelityFX SDK v2.4.0). KLBF Lab is not signed: if Windows SmartScreen shows up, click "More info" then "Run anyway". [Release page](https://github.com/PastiiJay/klbf-lab/releases/latest) (SHA-256 of the zip) · source: branch [`stable-amd`](https://github.com/PastiiJay/klbf-lab/tree/stable-amd), tag `v26.11.4`. Already on v26.11.1 to v26.11.3? Click **Update** in the launcher.
 
 **Measured on our PC** (RX 9070 XT, Ryzen 7 9800X3D, 32 GB):
 
@@ -41,7 +42,7 @@ The first start prepares the shaders (one progress bar, once) and downloads two 
 > **Latest run:** 2026-11-27 · **v26.11.1** · Profile X, FSR 4 Balanced 847p → 1440p, frame generation x2 · Radeon RX 9070 XT / Ryzen 7 9800X3D / 32 GB · **30.2 fps with frame generation (base 16.0)**, BM-v1 5:00 certified
 > <!-- latest-run-end -->
 
-- **60 min of play without a crash** on this version.
+- **45 min of play without a crash** on this version, in the open world.
 
 **Requirements**
 
@@ -51,19 +52,7 @@ The first start prepares the shaders (one progress bar, once) and downloads two 
 | Video memory | 16 GB recommended |
 | RAM | 32 GB recommended |
 
-Fixes since the first stable: the launcher opens on PCs where antivirus or restricted Windows blocked its screen helper (v26.11.2), and it now starts from "KLBF Lab.cmd" because Windows Defender wrongly flagged the old ".vbs" starter (v26.11.3). Also in this stable: RX 6000 device loss at world load (#127), an AMD compiler crash on RX 9070 XT, the high-performance GPU on laptops with two GPUs (#47). Everything, with every switch: **[CHANGELOG.md](https://github.com/PastiiJay/klbf-lab/blob/v26.11.3/CHANGELOG.md)**.
-
-## Test pre-release: v26.11.4 (28 Nov 2026)
-
-### [Download the v26.11.4 pre-release (KLBF-Lab.zip)](https://github.com/PastiiJay/klbf-lab/releases/tag/v26.11.4)
-
-A small test build for lower-end PCs. We're trying a few things: for some PCs it may change something, for others nothing at all. Don't expect miracles; the bigger changes will come in the next ones. The automatic update keeps offering only the stable.
-
-- keyboard and mouse (Controls tab), controller rumble, F8 overlay fixes, a fix for a crash at the start of the intro
-- the big Play button becomes Update when an update exists
-- bench form: "Where were you?" and Save ID
-
-Extract it in its own folder, next to your stable folder. On each: play about 10 minutes so the shaders finish, go to the same spot, click Run benchmark, and post both cards in a [bench result](https://github.com/PastiiJay/klbf-lab/issues/new?template=bench-bm-v1.yml), stable vs pre-release. Tell us honestly if your fps went up, down or stayed the same.
+New in v26.11.4: keyboard and mouse, controller rumble, F8 overlay fixes, a fix for a crash at the start of the intro (#69, #116), the big Play button becomes Update when an update exists, and the bench form asks "Where were you?" and shows a Save ID. Earlier fixes: the launcher opens where antivirus or restricted Windows blocked its screen helper (v26.11.2) and starts from "KLBF Lab.cmd" (v26.11.3); RX 6000 device loss at world load (#127), an AMD compiler crash on RX 9070 XT, the high-performance GPU on laptops with two GPUs (#47). Everything, with every switch: **[CHANGELOG.md](https://github.com/PastiiJay/klbf-lab/blob/stable-amd/CHANGELOG.md)**.
 
 ## Benchmark
 
@@ -92,7 +81,7 @@ Seen something else? [Open an issue](https://github.com/PastiiJay/klbf-lab/issue
 
 ## Credits
 
-**v26.11.4 (pre-release):**
+**v26.11.4:**
 - **Domi**, **pacoravan**, **Dominic**, **MalarkZA** and **Aphantasiac**: the reports behind this build.
 - **LooperSalty** (AnyXboxX) and **eikkapine**: the ideas behind keyboard and mouse.
 

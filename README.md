@@ -1,9 +1,9 @@
 <p align="center"><img src="docs/klbf/logo.svg" width="120" alt="KLBF Lab"></p>
 <h1 align="center">KLBF Lab</h1>
 <p align="center">
-  <a href="https://github.com/PastiiJay/klbf-lab/releases/latest"><img src="https://img.shields.io/badge/stable-v26.11.4-1f46c8" alt="stable: v26.11.4"></a>
-  <a href="#stable-v26114-28-nov-2026"><img src="https://img.shields.io/badge/BM--v1%20certified-30.2%20fps%20with%20frame%20generation%20(base%2016.0)-2ea44f" alt="BM-v1 certified: 30.2 fps with frame generation, base 16.0"></a>
-  <a href="#stable-v26114-28-nov-2026"><img src="https://img.shields.io/badge/real%20play-45%20min%20without%20a%20crash-2ea44f" alt="45 minutes of play without a crash"></a>
+  <a href="https://github.com/PastiiJay/klbf-lab/releases/latest"><img src="https://img.shields.io/badge/stable-v26.11.5-1f46c8" alt="stable: v26.11.5"></a>
+  <a href="#stable-v26115-28-nov-2026"><img src="https://img.shields.io/badge/BM--v1%20certified-30.2%20fps%20with%20frame%20generation%20(base%2016.0)-2ea44f" alt="BM-v1 certified: 30.2 fps with frame generation, base 16.0"></a>
+  <a href="#stable-v26115-28-nov-2026"><img src="https://img.shields.io/badge/real%20play-tested%20before%20release-2ea44f" alt="played in the open world before release"></a>
   <img src="https://img.shields.io/badge/license-GPL--3.0-555" alt="GPL-3.0">
   <a href="docs/klbf/MEASUREMENT.md"><img src="https://img.shields.io/badge/fps-shared%20measurement%20method-2ea44f" alt="shared measurement method"></a>
 </p>
@@ -11,9 +11,9 @@
 Runs the Xbox Series build of the title on a Windows PC, from your own copy. **Best on AMD Radeon** (tested on an RX 9070 XT), works on other DirectX 12 cards.
 **No game files here:** you need your own copy of the title.
 
-## Stable: v26.11.4 (28 Nov 2026)
+## Stable: v26.11.5 (28 Nov 2026)
 
-### [Download KLBF Lab v26.11.4 (KLBF-Lab.zip)](https://github.com/PastiiJay/klbf-lab/releases/latest/download/KLBF-Lab.zip)
+### [Download KLBF Lab v26.11.5 (KLBF-Lab.zip)](https://github.com/PastiiJay/klbf-lab/releases/latest/download/KLBF-Lab.zip)
 
 - **Auto-update:** one click, your saves and settings kept.
 - **Desktop shortcut,** like any game.
@@ -34,7 +34,7 @@ Runs the Xbox Series build of the title on a Windows PC, from your own copy. **B
 3. **Choose your game folder** (your own copy).
 4. **Play.**
 
-The first start prepares the shaders (one progress bar, once) and downloads two official components, each file checked: Microsoft's DirectX 12 Agility SDK and AMD FSR (FidelityFX SDK v2.4.0). KLBF Lab is not signed: if Windows SmartScreen shows up, click "More info" then "Run anyway". [Release page](https://github.com/PastiiJay/klbf-lab/releases/latest) (SHA-256 of the zip) · source: branch [`stable-amd`](https://github.com/PastiiJay/klbf-lab/tree/stable-amd), tag `v26.11.4`. Already on v26.11.1 to v26.11.3? Click **Update** in the launcher.
+The first start prepares the shaders (one progress bar, once) and downloads two official components, each file checked: Microsoft's DirectX 12 Agility SDK and AMD FSR (FidelityFX SDK v2.4.0). KLBF Lab is not signed: if Windows SmartScreen shows up, click "More info" then "Run anyway". [Release page](https://github.com/PastiiJay/klbf-lab/releases/latest) (SHA-256 of the zip) · source: branch [`stable-amd`](https://github.com/PastiiJay/klbf-lab/tree/stable-amd), tag `v26.11.5`. Already on v26.11.1 to v26.11.4? Click **Update** in the launcher.
 
 **Measured on our PC** (RX 9070 XT, Ryzen 7 9800X3D, 32 GB):
 
@@ -42,7 +42,7 @@ The first start prepares the shaders (one progress bar, once) and downloads two 
 > **Latest run:** 2026-11-27 · **v26.11.1** · Profile X, FSR 4 Balanced 847p → 1440p, frame generation x2 · Radeon RX 9070 XT / Ryzen 7 9800X3D / 32 GB · **30.2 fps with frame generation (base 16.0)**, BM-v1 5:00 certified
 > <!-- latest-run-end -->
 
-- **45 min of play without a crash** on this version, in the open world.
+- **Played on our PC in the open world** before release.
 
 **Requirements**
 
@@ -52,7 +52,7 @@ The first start prepares the shaders (one progress bar, once) and downloads two 
 | Video memory | 16 GB recommended |
 | RAM | 32 GB recommended |
 
-New in v26.11.4: keyboard and mouse, controller rumble, F8 overlay fixes, a fix for a crash at the start of the intro (#69, #116), the big Play button becomes Update when an update exists, and the bench form asks "Where were you?" and shows a Save ID. Earlier fixes: the launcher opens where antivirus or restricted Windows blocked its screen helper (v26.11.2) and starts from "KLBF Lab.cmd" (v26.11.3); RX 6000 device loss at world load (#127), an AMD compiler crash on RX 9070 XT, the high-performance GPU on laptops with two GPUs (#47). Everything, with every switch: **[CHANGELOG.md](https://github.com/PastiiJay/klbf-lab/blob/v26.11.5/CHANGELOG.md#v26114-27-nov-2026)**.
+New in v26.11.5: trees, foliage, fences and posts no longer vanish or turn black (#142, #145), a crash fix in memory remapping, and after a bench Play starts a normal game again (#147). **New experimental switches, all off by default** (Settings, Experimental tab): memory, stutter and pipeline options from the community. Try them one at a time and tell us what changes on your PC. Earlier: keyboard and mouse, controller rumble, F8 overlay fixes, the intro crash (#69, #116), RX 6000 device loss at world load (#127). Everything, with every switch: **[CHANGELOG.md](https://github.com/PastiiJay/klbf-lab/blob/v26.11.5/CHANGELOG.md#v26115-28-nov-2026)**.
 
 ## Benchmark
 
@@ -80,6 +80,12 @@ Everything we have seen and want to make better, from your reports and our own p
 Seen something else? [Open an issue](https://github.com/PastiiJay/klbf-lab/issues).
 
 ## Credits
+
+**v26.11.5:**
+- **Op-lite** (via [FilipGra24/OP-lite](https://github.com/FilipGra24/OP-lite)): the 28 Nov work, every new switch off by default.
+- **crossducking** (RAZDA4A-XEN): the fix for trees, foliage and posts turning black; **nathanbzrr**: code taken in.
+- **[fxceless](https://github.com/fxceless/victory-fork)**, **[CHECK6960](https://github.com/CHECK6960/Victory-Nvidia-optimized)** and **[LibsMQG](https://github.com/LibsMQG/hle-d3d12-amd)**: samplers, pipeline wait and memory switches (GPL-3.0).
+- **HandshakeHackin**: the bench fix (#147).
 
 **v26.11.4:**
 - **Domi**, **pacoravan**, **Dominic**, **MalarkZA** and **Aphantasiac**: the reports behind this build.

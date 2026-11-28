@@ -52,7 +52,7 @@ The first start prepares the shaders (one progress bar, once) and downloads two 
 | Video memory | 16 GB recommended |
 | RAM | 32 GB recommended |
 
-New in v26.11.4: keyboard and mouse, controller rumble, F8 overlay fixes, a fix for a crash at the start of the intro (#69, #116), the big Play button becomes Update when an update exists, and the bench form asks "Where were you?" and shows a Save ID. Earlier fixes: the launcher opens where antivirus or restricted Windows blocked its screen helper (v26.11.2) and starts from "KLBF Lab.cmd" (v26.11.3); RX 6000 device loss at world load (#127), an AMD compiler crash on RX 9070 XT, the high-performance GPU on laptops with two GPUs (#47). Everything, with every switch: **[CHANGELOG.md](https://github.com/PastiiJay/klbf-lab/blob/stable-amd/CHANGELOG.md)**.
+New in v26.11.4: keyboard and mouse, controller rumble, F8 overlay fixes, a fix for a crash at the start of the intro (#69, #116), the big Play button becomes Update when an update exists, and the bench form asks "Where were you?" and shows a Save ID. Earlier fixes: the launcher opens where antivirus or restricted Windows blocked its screen helper (v26.11.2) and starts from "KLBF Lab.cmd" (v26.11.3); RX 6000 device loss at world load (#127), an AMD compiler crash on RX 9070 XT, the high-performance GPU on laptops with two GPUs (#47). Everything, with every switch: **[CHANGELOG.md](https://github.com/PastiiJay/klbf-lab/blob/v26.11.5/CHANGELOG.md#v26114-27-nov-2026)**.
 
 ## Benchmark
 

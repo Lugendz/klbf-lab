@@ -53,6 +53,18 @@ The first start prepares the shaders (one progress bar, once) and downloads two 
 
 Fixes since the first stable: the launcher opens on PCs where antivirus or restricted Windows blocked its screen helper (v26.11.2), and it now starts from "KLBF Lab.cmd" because Windows Defender wrongly flagged the old ".vbs" starter (v26.11.3). Also in this stable: RX 6000 device loss at world load (#127), an AMD compiler crash on RX 9070 XT, the high-performance GPU on laptops with two GPUs (#47). Everything, with every switch: **[CHANGELOG.md](https://github.com/PastiiJay/klbf-lab/blob/v26.11.3/CHANGELOG.md)**.
 
+## Test pre-release: v26.11.4 (28 Nov 2026)
+
+### [Download the v26.11.4 pre-release (KLBF-Lab.zip)](https://github.com/PastiiJay/klbf-lab/releases/tag/v26.11.4)
+
+A small test build for lower-end PCs. We're trying a few things: for some PCs it may change something, for others nothing at all. Don't expect miracles; the bigger changes will come in the next ones. The automatic update keeps offering only the stable.
+
+- keyboard and mouse (Controls tab), controller rumble, F8 overlay fixes, a fix for a crash at the start of the intro
+- the big Play button becomes Update when an update exists
+- bench form: "Where were you?" and Save ID
+
+Extract it in its own folder, next to your stable folder. On each: play about 10 minutes so the shaders finish, go to the same spot, click Run benchmark, and post both cards in a [bench result](https://github.com/PastiiJay/klbf-lab/issues/new?template=bench-bm-v1.yml), stable vs pre-release. Tell us honestly if your fps went up, down or stayed the same.
+
 ## Benchmark
 
 KLBF Lab Bench BM-v1: 5 minutes, hands-off, wherever you like in the game, with a certified card at the end. Say where you were on your post (city, countryside, indoors, night...). [How to run it](docs/klbf/BENCH-BM-V1.md) · [results by hardware](docs/klbf/BAYSIDE-MORNING-V1.md) · post yours with the [Bench result form](https://github.com/PastiiJay/klbf-lab/issues/new?template=bench-bm-v1.yml).
@@ -79,6 +91,10 @@ Everything we have seen and want to make better, from your reports and our own p
 Seen something else? [Open an issue](https://github.com/PastiiJay/klbf-lab/issues).
 
 ## Credits
+
+**v26.11.4 (pre-release):**
+- **Domi**, **pacoravan**, **Dominic**, **MalarkZA** and **Aphantasiac**: the reports behind this build.
+- **LooperSalty** (AnyXboxX) and **eikkapine**: the ideas behind keyboard and mouse.
 
 **v26.11.1 to v26.11.3:**
 - **INGLIP**, **deydey103** and **Solar**: the launcher error reports behind v26.11.2.

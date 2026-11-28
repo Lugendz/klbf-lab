@@ -34,7 +34,7 @@ Runs the Xbox Series build of the title on a Windows PC, from your own copy. **B
 3. **Choose your game folder** (your own copy).
 4. **Play.**
 
-The first start prepares the shaders (one progress bar, once) and downloads two official components, each file checked: Microsoft's DirectX 12 Agility SDK and AMD FSR (FidelityFX SDK v2.4.0). KLBF Lab is not signed: if Windows SmartScreen shows up, click "More info" then "Run anyway". [Release page](https://github.com/PastiiJay/klbf-lab/releases/latest) (SHA-256 of the zip) · source: branch [`stable-amd`](https://github.com/PastiiJay/klbf-lab/tree/stable-amd), tag `v26.11.5`. Already on v26.11.1 to v26.11.4? Click **Update** in the launcher.
+The first start prepares the shaders (one progress bar, once) and downloads two official components, each file checked: Microsoft's DirectX 12 Agility SDK and AMD FSR (FidelityFX SDK v2.4.0). KLBF Lab is not signed: if Windows SmartScreen shows up, click "More info" then "Run anyway". [Release page](https://github.com/PastiiJay/klbf-lab/releases/latest) (SHA-256 of each zip; [how to check it, or build it yourself](docs/klbf/VERIFY.md)) · source: branch [`stable-amd`](https://github.com/PastiiJay/klbf-lab/tree/stable-amd), tag `v26.11.5`. Already on v26.11.1 to v26.11.4? Click **Update** in the launcher.
 
 **Measured on our PC** (RX 9070 XT, Ryzen 7 9800X3D, 32 GB):
 
